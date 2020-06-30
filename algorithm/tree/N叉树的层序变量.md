@@ -43,3 +43,24 @@ def postorder(self, root: 'Node') -> List[int]:
             ans.append(node.val)
     return ans
 ```
+
+## BFS
+```
+class Solution:
+    def levelOrder(self, root: 'Node') -> List[List[int]]:
+        if root is None:
+            return []
+        from collections import deque
+        queue = deque([root])
+        ans = []
+        while queue:
+            ans.append([])
+            for _ in range(len(queue)):
+                node = queue.pop()
+                if node is None:
+                    continue
+                ans[-1].append(node.val)
+                for children in node.children:
+                    queue.appendleft(children)
+        return ans
+```
