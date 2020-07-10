@@ -1,5 +1,5 @@
 ## BFS层序遍历
-#### 要点： 队列维持当前层所有node 处理完毕后调用下一层
+-  要点： 队列维持当前层所有node 处理完毕后调用下一层
 
 ```
 def levelOrder(self, root: TreeNode) -> List[List[int]]:
@@ -23,7 +23,7 @@ def levelOrder(self, root: TreeNode) -> List[List[int]]:
 ```
 
 ## 颜色标记法 
-#### 虽然是层序遍历 但是一个个节点出来的
+-  虽然是层序遍历 但是一个个节点出来的
 
 ```
 def levelOrder(self, root: TreeNode) -> List[List[int]]:
